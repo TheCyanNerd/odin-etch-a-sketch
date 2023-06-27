@@ -37,10 +37,8 @@ cells.forEach((cell) => {
 });
 
 
+let replaceGrid = function() {
+}
 
-
-
-
-
-
-
+const sizeButton = document.querySelector('#size-prompt');
+sizeButton.addEventListener('click', replaceGrid);
