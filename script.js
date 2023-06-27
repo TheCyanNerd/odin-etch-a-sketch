@@ -24,11 +24,16 @@ function createGrid(gridSize) {
 
     // create cells
     for(let j = 0; j < gridSize; j++) {
-      let div = document.createElement('div');
+      let cell = document.createElement('div');
       let columnName = 'c' + (j+1);
-      div.classList.add('grid-square', columnName);
+      cell.classList.add('grid-square', columnName);
+
+      const gridWidth = getComputedStyle(container).width;
+      let cellSize = parseInt(gridWidth) / gridSize;
+
+      cell.style.cssText = `width: ${cellSize}px; height: ${cellSize}px;`;
       
-      row.appendChild(div);
+      row.appendChild(cell);
     }
 
     container.appendChild(row);

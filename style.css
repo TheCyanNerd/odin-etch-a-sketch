@@ -1,6 +1,9 @@
 #grid {
   display: flex;
   flex-direction: column;
+
+  width: 500px;
+  height: 500px;
 }
 
 .row {
@@ -10,9 +13,6 @@
 
 .grid-square {
   border: 1px solid black;
-
-  width: 2em;
-  height: 2em;
 }
 
 .colored {
