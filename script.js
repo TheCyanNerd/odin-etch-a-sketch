@@ -37,7 +37,13 @@ cells.forEach((cell) => {
 
 function removeGrid() {
   const container = document.querySelector('#grid');
-  container.childNodes.forEach((child) => container.removeChild(child));
+  const rows = document.querySelectorAll('.row');
+  rows.forEach((row) => {
+    row.childNodes.forEach((child) => {
+      row.removeChild(child);
+    });
+    container.removeChild(row);
+  });
 }
 
 
