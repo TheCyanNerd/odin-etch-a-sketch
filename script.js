@@ -1,3 +1,5 @@
+createGrid();
+
 function createGrid() {
   const gridSize = 16;      // number of cells in a row/column
 
@@ -24,4 +26,21 @@ function createGrid() {
   }
 }
 
-createGrid();
+
+let colorCell = function() {
+  this.classList.add('colored');
+}
+
+const cells = document.querySelectorAll('.grid-square');
+cells.forEach((cell) => { 
+  cell.addEventListener('mouseenter', colorCell); 
+});
+
+
+
+
+
+
+
+
+
