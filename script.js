@@ -1,8 +1,6 @@
-createGrid();
+createGrid(16);
 
-function createGrid() {
-  const gridSize = 16;      // number of cells in a row/column
-
+function createGrid(gridSize) {
   const container = document.querySelector('#grid');
 
   // create rows
@@ -37,7 +35,15 @@ cells.forEach((cell) => {
 });
 
 
+function removeGrid() {
+}
+
+
 let replaceGrid = function() {
+  let size = parseInt(prompt("How many squares per side?", '16'));
+  if((size >= 1) && (size <= 100)) {
+    createGrid(size);
+  }
 }
 
 const sizeButton = document.querySelector('#size-prompt');
