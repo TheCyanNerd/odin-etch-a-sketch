@@ -3,11 +3,14 @@
   flex-direction: column;
 }
 
-.row, .grid-square {
-  border: 1px solid black;
+.row {
+  display: flex;
+  flex-direction: row;
 }
 
 .grid-square {
+  border: 1px solid black;
+
   width: 2em;
   height: 2em;
 }
