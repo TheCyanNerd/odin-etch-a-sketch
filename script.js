@@ -1,6 +1,5 @@
 function createGrid() {
   const gridSize = 16;      // number of cells in a row/column
-  const cellSize = 2;       // cell width/height in em
 
   const container = document.querySelector('#grid');
 
@@ -17,9 +16,6 @@ function createGrid() {
       let div = document.createElement('div');
       let columnName = 'c' + (j+1);
       div.classList.add('grid-square', columnName);
-  
-      // make it a square
-      div.style.cssText = `width: ${cellSize}em; height: ${cellSize}em;`; 
       
       row.appendChild(div);
     }

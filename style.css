@@ -6,3 +6,8 @@
 .row, .grid-square {
   border: 1px solid black;
 }
+
+.grid-square {
+  width: 2em;
+  height: 2em;
+}
