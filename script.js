@@ -66,4 +66,16 @@ let replaceGrid = function() {
 const sizeButton = document.querySelector('#size-prompt');
 sizeButton.addEventListener('click', replaceGrid);
 
+
+let clearCanvas = function() {
+  let cells = document.querySelectorAll('.grid-square');
+  cells.forEach((cell) => {
+    cell.classList.remove('colored');
+  });
+}
+
+const clearButton = document.querySelector('#clear-button');
+clearButton.addEventListener('click', clearCanvas);
+
+
 createGrid(16);
