@@ -3,6 +3,6 @@
   flex-direction: column;
 }
 
-.row {
+.row, .grid-square {
   border: 1px solid black;
 }

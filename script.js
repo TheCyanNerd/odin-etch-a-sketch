@@ -12,9 +12,20 @@ function createGrid() {
     row.setAttribute('id', rowName);      // label each row div
     row.classList.add('row');
 
+    // create cells
+    for(let j = 0; j < gridSize; j++) {
+      let div = document.createElement('div');
+      let columnName = 'c' + (j+1);
+      div.classList.add('grid-square', columnName);
+  
+      // make it a square
+      div.style.cssText = `width: ${cellSize}em; height: ${cellSize}em;`; 
+      
+      row.appendChild(div);
+    }
+
     container.appendChild(row);
   }
-
 }
 
 createGrid();
