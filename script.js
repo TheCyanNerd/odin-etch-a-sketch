@@ -36,12 +36,15 @@ cells.forEach((cell) => {
 
 
 function removeGrid() {
+  const container = document.querySelector('#grid');
+  container.childNodes.forEach((child) => container.removeChild(child));
 }
 
 
 let replaceGrid = function() {
   let size = parseInt(prompt("How many squares per side?", '16'));
   if((size >= 1) && (size <= 100)) {
+    removeGrid();
     createGrid(size);
   }
 }
